@@ -1,0 +1,235 @@
+.home-services-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(to bottom right, #f0fdf4, #ecfeff);
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-services-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(14, 165, 233, 0.1));
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 0;
+}
+
+.home-services-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.home-services-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.home-services-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+.home-services-title-highlight {
+  color: #10b981;
+  font-weight: 600;
+  display: inline;
+}
+
+.home-services-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.home-services-grid-two-columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.home-services-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  height: 100%;
+}
+
+.home-services-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05), rgba(14, 165, 233, 0.05));
+  border-radius: 1.5rem;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.home-services-card:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.home-services-card:hover::before {
+  opacity: 1;
+}
+
+.home-services-card-hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.home-services-card-hover::before {
+  opacity: 1;
+}
+
+.home-services-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
+  transition: all 0.3s ease;
+}
+
+.home-services-card:hover .home-services-icon-wrapper {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(16, 185, 129, 0.3);
+}
+
+.home-services-icon-dot {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 14px;
+  height: 14px;
+  background: #10b981;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.home-services-card-title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: #1e293b;
+  transition: color 0.3s ease;
+}
+
+.home-services-card:hover .home-services-card-title {
+  color: #10b981;
+}
+
+.home-services-card-desc {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+@media (max-width: 1024px) {
+  .home-services-section {
+    padding: 4rem 2rem;
+  }
+  
+  .home-services-wrapper {
+    max-width: 800px;
+  }
+  
+  .home-services-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-services-section {
+    padding: 3rem 1.5rem;
+  }
+  
+  .home-services-header {
+    margin-bottom: 3rem;
+  }
+  
+  .home-services-title {
+    font-size: 2rem;
+  }
+  
+  .home-services-grid-two-columns {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .home-services-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .home-services-wrapper {
+    max-width: 100%;
+  }
+  
+  .home-services-grid-two-columns {
+    max-width: 400px;
+  }
+  
+  .home-services-card {
+    padding: 1.75rem;
+  }
+  
+  .home-services-icon-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-services-section {
+    padding: 2.5rem 1rem;
+  }
+  
+  .home-services-title {
+    font-size: 1.75rem;
+  }
+  
+  .home-services-card {
+    padding: 1.5rem;
+  }
+  
+  .home-services-card-title {
+    font-size: 1.25rem;
+  }
+  
+  .home-services-card-desc {
+    font-size: 0.95rem;
+  }
+}
