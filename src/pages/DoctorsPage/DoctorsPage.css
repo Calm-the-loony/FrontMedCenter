@@ -14,7 +14,7 @@
 .doctors-hero {
   padding: 120px 0 60px;
   text-align: center;
-  background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
+  background: #f0fdf4;
   position: relative;
   overflow: hidden;
 }
@@ -38,6 +38,7 @@
   color: #10b981;
   font-weight: 500;
   margin-bottom: 24px;
+  user-select: none;
 }
 
 .doctors-tag-dot {
@@ -45,6 +46,7 @@
   height: 6px;
   background: #10b981;
   border-radius: 50%;
+  user-select: none;
 }
 
 .doctors-title {
@@ -53,12 +55,14 @@
   font-weight: 300;
   margin: 0 0 16px 0;
   letter-spacing: -0.5px;
+  user-select: none;
 }
 
 .doctors-title-highlight {
   color: #10b981;
   font-weight: 600;
   display: inline;
+  user-select: none;
 }
 
 .doctors-description {
@@ -66,6 +70,7 @@
   color: #64748b;
   line-height: 1.6;
   margin: 0 auto;
+  user-select: none;
 }
 
 .doctors-search-section {
@@ -84,6 +89,7 @@
   top: 50%;
   transform: translateY(-50%);
   color: #94a3b8;
+  user-select: none;
 }
 
 .search-wrapper input {
@@ -116,6 +122,7 @@
   padding: 4px;
   border-radius: 6px;
   transition: all 0.2s ease;
+  user-select: none;
 }
 
 .search-clear-btn:hover {
@@ -127,6 +134,7 @@
   text-align: left;
   font-size: 14px;
   color: #64748b;
+  user-select: none;
 }
 
 .search-results-info span {
@@ -143,12 +151,14 @@
   font-weight: 300;
   margin: 0 0 8px 0;
   color: #1e293b;
+  user-select: none;
 }
 
 .section-header p {
   font-size: 18px;
   color: #64748b;
   margin: 0;
+  user-select: none;
 }
 
 /* Статистика */
@@ -172,6 +182,7 @@
   align-items: center;
   gap: 16px;
   transition: all 0.3s ease;
+  user-select: none;
 }
 
 .stat-card:hover {
@@ -189,6 +200,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  user-select: none;
 }
 
 .stat-icon-wrapper svg {
@@ -241,6 +253,7 @@
   border: none;
   font-family: 'Inter', sans-serif;
   text-align: left;
+  user-select: none;
 }
 
 .specialty-card:hover {
@@ -326,12 +339,14 @@
 .sort-label {
   font-size: 14px;
   color: #64748b;
+  user-select: none;
 }
 
 .sort-count {
   font-size: 16px;
   font-weight: 600;
   color: #10b981;
+  user-select: none;
 }
 
 .no-results-card {
@@ -342,6 +357,7 @@
   border: 1.5px solid #e2e8f0;
   max-width: 500px;
   margin: 0 auto;
+  user-select: none;
 }
 
 .no-results-icon {
@@ -353,6 +369,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
+  user-select: none;
 }
 
 .no-results-icon svg {
@@ -381,7 +398,7 @@
 
 .doctor-card {
   background: white;
-  border: 1.5px solid #10b981;
+  border: 1.5px solid #e2e8f0;
   border-radius: 16px;
   padding: 24px;
   position: relative;
@@ -389,18 +406,20 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+  user-select: none;
 }
 
 .doctor-card:hover {
   transform: translateY(-4px);
-  border-color: #0d9366;
+  border-color: #10b981;
   box-shadow: 0 8px 32px rgba(16, 185, 129, 0.12);
 }
 
 .featured-badge {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 10px;
+  right: 10px;
   background: linear-gradient(135deg, #10b981, #0d9488);
   color: white;
   padding: 4px 10px;
@@ -412,6 +431,7 @@
   gap: 4px;
   letter-spacing: 0.3px;
   z-index: 2;
+  user-select: none;
 }
 
 .doctor-card-header {
@@ -429,6 +449,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  user-select: none;
 }
 
 .doctor-header-info {
@@ -455,6 +476,7 @@
   align-items: center;
   gap: 4px;
   font-size: 14px;
+  user-select: none;
 }
 
 .doctor-rating svg {
@@ -483,6 +505,7 @@
   color: #64748b;
   margin-bottom: 16px;
   align-self: flex-start;
+  user-select: none;
 }
 
 .doctor-description {
@@ -511,6 +534,7 @@
   gap: 8px;
   font-size: 14px;
   color: #64748b;
+  user-select: none;
 }
 
 .doctor-detail svg {
@@ -532,6 +556,7 @@
   gap: 8px;
   font-size: 14px;
   color: #64748b;
+  user-select: none;
 }
 
 .service-item svg {
@@ -557,6 +582,7 @@
 .price-label {
   font-size: 12px;
   color: #94a3b8;
+  user-select: none;
 }
 
 .price-value {
@@ -580,6 +606,9 @@
   transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
+  user-select: none;
+  position: relative;
+  z-index: 1;
 }
 
 .book-consultation-btn:hover {
@@ -587,12 +616,31 @@
   box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3);
 }
 
-.doctors-cta-section {
-  padding: 60px 0;
-  background: #f8fafc;
+.doctor-card-view-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #10b981;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 16px;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+  user-select: none;
 }
 
-.cta-card {
+.doctor-card:hover .doctor-card-view-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.doctors-cta-section {
+  padding: 60px 0;
+  background: #f0fdf4;
+}
+
+.cta-content {
   background: white;
   border-radius: 20px;
   padding: 48px;
@@ -609,6 +657,7 @@
   margin: 0 0 16px 0;
   color: #1e293b;
   line-height: 1.2;
+  user-select: none;
 }
 
 .cta-content p {
@@ -619,6 +668,7 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  user-select: none;
 }
 
 .cta-buttons {
@@ -639,6 +689,7 @@
   transition: all 0.3s ease;
   font-family: 'Inter', sans-serif;
   font-size: 15px;
+  user-select: none;
 }
 
 .cta-btn.primary {
@@ -663,6 +714,33 @@
   transform: translateY(-2px);
 }
 
+.doctor-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.doctor-card-link:hover .doctor-card {
+  transform: translateY(-4px);
+  border-color: #10b981;
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.12);
+}
+
+/* Отключаем выделение текста для интерактивных элементов */
+button, a, .doctor-card-link, .doctor-card {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Разрешаем выделение только для поиска и описаний */
+input, textarea, .doctor-description, .doctors-description, .cta-content p {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
 
 @media (max-width: 1024px) {
   .doctors-title {
@@ -717,7 +795,7 @@
     grid-template-columns: 1fr;
   }
 
-  .cta-card {
+  .cta-content {
     padding: 32px 24px;
   }
 
@@ -804,4 +882,3 @@
     font-size: 13px;
   }
 }
-

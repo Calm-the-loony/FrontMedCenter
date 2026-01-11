@@ -9,8 +9,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
 }
-
 
 .contacts-container {
   max-width: 1200px;
@@ -36,6 +41,7 @@
   font-weight: 500;
   width: fit-content;
   margin: 0 auto 20px;
+  cursor: default;
 }
 
 .contacts-tag-dot {
@@ -43,6 +49,7 @@
   height: 6px;
   background: #10b981;
   border-radius: 50%;
+  cursor: default;
 }
 
 .contacts-title {
@@ -52,6 +59,7 @@
   margin: 0 0 16px 0;
   letter-spacing: -0.5px;
   text-align: center;
+  cursor: default;
 }
 
 .contacts-title-highlight {
@@ -59,6 +67,7 @@
   font-weight: 600;
   display: inline-block;
   margin-left: 12px;
+  cursor: default;
 }
 
 .contacts-description {
@@ -68,6 +77,7 @@
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
+  cursor: default;
 }
 
 .contacts-content {
@@ -108,6 +118,7 @@
   align-items: center;
   gap: 0.75rem;
   font-weight: 600;
+  cursor: default;
 }
 
 .contacts-info-title svg {
@@ -124,6 +135,7 @@
   display: flex;
   gap: 1rem;
   align-items: flex-start;
+  cursor: default;
 }
 
 .contacts-info-icon {
@@ -135,6 +147,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  cursor: default;
 }
 
 .contacts-info-icon svg {
@@ -146,18 +159,21 @@
   color: #64748b;
   margin-bottom: 0.25rem;
   font-weight: 500;
+  cursor: default;
 }
 
 .contacts-info-value {
   font-size: 1rem;
   color: #1e293b;
   font-weight: 500;
+  cursor: default;
 }
 
 .contacts-link {
   color: #1e293b;
   text-decoration: none;
   transition: color 0.2s ease;
+  cursor: pointer !important;
 }
 
 .contacts-link:hover {
@@ -171,10 +187,12 @@
   padding: 1.25rem;
   margin-top: 0.5rem;
   border: 1px solid rgba(239, 68, 68, 0.2);
+  cursor: default;
 }
 
 .contacts-emergency .contacts-info-icon {
   background: rgba(239, 68, 68, 0.1);
+  cursor: default;
 }
 
 .contacts-emergency .contacts-info-icon svg {
@@ -185,12 +203,14 @@
   font-size: 1.125rem;
   color: #ef4444;
   font-weight: 600;
+  cursor: default;
 }
 
 .contacts-emergency-link {
   color: #ef4444;
   text-decoration: none;
   font-weight: 500;
+  cursor: pointer !important;
 }
 
 .contacts-emergency-link:hover {
@@ -201,6 +221,7 @@
   font-size: 0.875rem;
   color: #ef4444;
   margin-top: 0.25rem;
+  cursor: default;
 }
 
 /* Отделения */
@@ -212,6 +233,7 @@
   align-items: center;
   gap: 0.625rem;
   font-weight: 600;
+  cursor: default;
 }
 
 .contacts-section-title svg {
@@ -230,6 +252,7 @@
   border-radius: 0.75rem;
   padding: 1.25rem;
   transition: all 0.2s ease;
+  cursor: pointer !important;
 }
 
 .department-item:hover {
@@ -243,12 +266,14 @@
   font-weight: 600;
   color: #1e293b;
   margin-bottom: 0.75rem;
+  cursor: pointer;
 }
 
 .department-info {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  cursor: default;
 }
 
 .department-phone,
@@ -258,11 +283,13 @@
   gap: 0.5rem;
   font-size: 0.875rem;
   color: #64748b;
+  cursor: default;
 }
 
 .department-phone a {
   color: #64748b;
   text-decoration: none;
+  cursor: pointer !important;
 }
 
 .department-phone a:hover {
@@ -274,6 +301,7 @@
   color: #10b981;
   width: 0.875rem;
   height: 0.875rem;
+  cursor: default;
 }
 
 .contacts-map-container {
@@ -290,11 +318,13 @@
   margin-bottom: 1rem;
   overflow: hidden;
   border: 1px solid rgba(16, 185, 129, 0.1);
+  cursor: default;
 }
 
 .map-placeholder {
   text-align: center;
   padding: 2.5rem;
+  cursor: default;
 }
 
 .map-placeholder-text h3 {
@@ -303,10 +333,12 @@
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
+  cursor: default;
 }
 
 .map-placeholder-text p {
   color: #64748b;
+  cursor: default;
 }
 
 .map-instructions {
@@ -317,6 +349,7 @@
   background: #f8fafc;
   border-radius: 0.5rem;
   border: 1px solid rgba(16, 185, 129, 0.1);
+  cursor: default;
 }
 
 .map-link {
@@ -326,6 +359,7 @@
   display: block;
   margin-top: 0.5rem;
   transition: all 0.2s ease;
+  cursor: pointer !important;
 }
 
 .map-link:hover {
@@ -354,6 +388,7 @@
   flex: 1;
   justify-content: center;
   border: 1px solid rgba(16, 185, 129, 0.1);
+  cursor: pointer !important;
 }
 
 .social-link:hover {
@@ -368,11 +403,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .social-link svg {
   color: #64748b;
   transition: color 0.2s ease;
+  cursor: pointer;
 }
 
 .social-link:hover svg {
@@ -396,6 +433,7 @@
   color: #1e293b;
   transition: all 0.2s ease;
   border: 1px solid rgba(16, 185, 129, 0.1);
+  cursor: pointer !important;
 }
 
 .quick-link:hover {
@@ -407,6 +445,7 @@
 .quick-link svg {
   color: #10b981;
   transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
 .quick-link:hover svg {
@@ -434,6 +473,7 @@
   gap: 1.25rem;
   align-items: flex-start;
   border: 1px solid rgba(16, 185, 129, 0.1);
+  cursor: default;
 }
 
 .note-icon {
@@ -446,6 +486,7 @@
   justify-content: center;
   flex-shrink: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: default;
 }
 
 .note-icon svg {
@@ -457,11 +498,13 @@
   color: #1e293b;
   margin-bottom: 0.75rem;
   font-weight: 600;
+  cursor: default;
 }
 
 .note-content p {
   color: #64748b;
   line-height: 1.6;
+  cursor: default;
 }
 
 /* Адаптивность */
@@ -495,7 +538,6 @@
   .social-links {
     flex-direction: column;
   }
-  
 }
 
 @media (max-width: 480px) {
@@ -520,4 +562,49 @@
   .contacts-map {
     height: 15.625rem;
   }
+}
+
+/* Стили для hover-эффектов и курсоров */
+@media (hover: hover) {
+  .contacts-link:hover,
+  .contacts-emergency-link:hover,
+  .department-item:hover,
+  .department-phone a:hover,
+  .map-link:hover,
+  .social-link:hover,
+  .quick-link:hover {
+    cursor: pointer;
+  }
+  
+  .contacts-tag:hover,
+  .contacts-title:hover,
+  .contacts-title-highlight:hover,
+  .contacts-description:hover,
+  .contacts-info-title:hover,
+  .contacts-info-label:hover,
+  .contacts-info-value:hover,
+  .contacts-emergency:hover,
+  .contacts-emergency-note:hover,
+  .contacts-section-title:hover,
+  .department-name:hover,
+  .department-info:hover,
+  .department-hours:hover,
+  .map-instructions:hover,
+  .map-placeholder:hover,
+  .note-card:hover,
+  .note-content h3:hover,
+  .note-content p:hover {
+    cursor: default;
+  }
+}
+
+/* Стили для focus-состояний */
+.contacts-link:focus,
+.contacts-emergency-link:focus,
+.department-item:focus,
+.map-link:focus,
+.social-link:focus,
+.quick-link:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
 }

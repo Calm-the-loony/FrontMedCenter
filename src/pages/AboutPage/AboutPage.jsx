@@ -160,7 +160,6 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Наша история */}
       <section className="about-story-section">
         <div className="about-container-main">
           <div className="about-section-header">

@@ -5,12 +5,19 @@
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   position: relative;
   overflow: hidden;
+  
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
 }
 
 .cta-wrapper {
   max-width: 900px;
   margin: 0 auto;
 }
+
 .cta-card {
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(20px);
@@ -125,6 +132,11 @@
   max-width: 600px;
   line-height: 1.7;
   font-weight: 400;
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  cursor: auto; 
 }
 
 .cta-button {
@@ -147,6 +159,11 @@
   overflow: hidden;
   letter-spacing: 0.3px;
   min-width: 280px;
+ 
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .cta-button::before {
@@ -215,6 +232,25 @@
 .cta-button:active {
   transform: translateY(-1px);
   transition: transform 0.1s ease;
+}
+
+.cta-title, .cta-title-highlight {
+  cursor: default; 
+}
+
+.cta-icon-wrapper {
+  cursor: default;
+}
+
+.cta-button:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+@media (hover: hover) {
+  .cta-button:hover {
+    cursor: pointer;
+  }
 }
 
 @media (max-width: 1024px) {

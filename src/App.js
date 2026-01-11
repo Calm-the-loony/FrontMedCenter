@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext'; 
@@ -17,6 +16,7 @@ import ConsultationsPage from './pages/ConsultationsPage/ConsultationsPage';
 import ServicesPage from './pages/ServicesPage/ServicesPage'; 
 import DoctorsPage from './pages/DoctorsPage/DoctorsPage';
 import AboutPage from './pages/AboutPage/AboutPage';
+import DoctorDetailPage from './pages/DoctorDetailPage/DoctorDetailPage';
 import './style/Global.css';
 
 const ProtectedRoute = ({ children }) => {
@@ -69,6 +69,7 @@ function App() {
               <Route path="/consultations" element={<ConsultationsPage />} />
               <Route path="/services" element={<ServicesPage />} /> 
               <Route path="/doctors" element={<DoctorsPage />} />
+               <Route path="/doctors/:id" element={<DoctorDetailPage />} />
               <Route path="/about" element={<AboutPage />} />
             </Routes>
           </main>

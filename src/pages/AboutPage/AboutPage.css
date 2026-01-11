@@ -3,6 +3,12 @@
   font-family: 'Inter', sans-serif;
   color: #1e293b;
   background: #f8fafc;
+  
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
 }
 
 .about-container-main {
@@ -25,6 +31,7 @@
   color: #64748b;
   text-decoration: none;
   transition: color 0.2s ease;
+  cursor: pointer !important;
 }
 
 .about-breadcrumb a:hover {
@@ -34,6 +41,7 @@
 .about-breadcrumb span {
   color: #10b981;
   font-weight: 500;
+  cursor: default;
 }
 
 .about-hero-section {
@@ -66,6 +74,7 @@
   color: #10b981;
   font-weight: 500;
   margin-bottom: 24px;
+  cursor: default;
 }
 
 .about-hero-title {
@@ -75,6 +84,7 @@
   margin: 0 0 24px 0;
   letter-spacing: -0.5px;
   color: #1e293b;
+  cursor: default;
 }
 
 .about-gradient-text {
@@ -83,6 +93,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 600;
+  cursor: default;
 }
 
 .about-hero-description {
@@ -90,6 +101,7 @@
   color: #64748b;
   line-height: 1.6;
   margin: 0 0 40px 0;
+  cursor: default;
 }
 
 .about-hero-stats {
@@ -102,6 +114,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  cursor: default;
 }
 
 .about-stat-icon {
@@ -113,6 +126,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: default;
 }
 
 .about-stat-icon svg {
@@ -130,12 +144,14 @@
   font-weight: 700;
   color: #1e293b;
   line-height: 1;
+  cursor: default;
 }
 
 .about-stat-label {
   font-size: 14px;
   color: #64748b;
   line-height: 1.4;
+  cursor: default;
 }
 
 .about-hero-image {
@@ -147,6 +163,7 @@
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  cursor: default;
 }
 
 .about-image-wrapper img {
@@ -163,6 +180,7 @@
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(14, 165, 233, 0.1));
+  cursor: default;
 }
 
 .about-section-header {
@@ -182,6 +200,7 @@
   color: #10b981;
   font-weight: 500;
   margin-bottom: 20px;
+  cursor: default;
 }
 
 .about-section-title {
@@ -190,6 +209,7 @@
   margin: 0 0 16px 0;
   color: #1e293b;
   line-height: 1.1;
+  cursor: default;
 }
 
 .about-section-subtitle {
@@ -198,6 +218,7 @@
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
+  cursor: default;
 }
 
 .about-story-section {
@@ -219,6 +240,7 @@
   bottom: 0;
   width: 2px;
   background: linear-gradient(to bottom, #10b981, #0891b2);
+  cursor: default;
 }
 
 .about-milestone {
@@ -243,6 +265,7 @@
   font-weight: 600;
   color: #10b981;
   z-index: 2;
+  cursor: default;
 }
 
 .about-milestone-content {
@@ -251,6 +274,7 @@
   border-radius: 16px;
   padding: 24px;
   transition: all 0.3s ease;
+  cursor: pointer !important;
 }
 
 .about-milestone-content:hover {
@@ -264,6 +288,7 @@
   font-weight: 600;
   margin: 0 0 8px 0;
   color: #1e293b;
+  cursor: pointer;
 }
 
 .about-milestone-description {
@@ -271,6 +296,7 @@
   color: #64748b;
   margin: 0;
   line-height: 1.6;
+  cursor: pointer;
 }
 
 .about-timeline-line {
@@ -280,6 +306,7 @@
   width: 2px;
   height: 48px;
   background: linear-gradient(to bottom, #10b981, #0891b2);
+  cursor: default;
 }
 
 .about-values-section {
@@ -305,6 +332,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer !important;
 }
 
 .about-value-card:hover {
@@ -322,6 +350,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
+  cursor: pointer;
 }
 
 .about-value-icon svg {
@@ -333,6 +362,7 @@
   font-weight: 600;
   margin: 0 0 16px 0;
   color: #1e293b;
+  cursor: pointer;
 }
 
 .about-value-description {
@@ -340,6 +370,7 @@
   color: #64748b;
   line-height: 1.6;
   margin: 0;
+  cursor: pointer;
 }
 
 .about-team-section {
@@ -361,6 +392,7 @@
   border-radius: 20px;
   overflow: hidden;
   transition: all 0.3s ease;
+  cursor: pointer !important;
 }
 
 .about-team-card:hover {
@@ -372,6 +404,7 @@
   position: relative;
   height: 280px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .about-member-image img {
@@ -389,6 +422,7 @@
   position: absolute;
   top: 16px;
   right: 16px;
+  cursor: pointer;
 }
 
 .about-experience-badge {
@@ -402,6 +436,7 @@
   font-size: 12px;
   font-weight: 500;
   color: #10b981;
+  cursor: pointer;
 }
 
 .about-experience-badge svg {
@@ -418,6 +453,7 @@
   font-weight: 600;
   margin: 0 0 8px 0;
   color: #1e293b;
+  cursor: pointer;
 }
 
 .about-member-position {
@@ -425,12 +461,14 @@
   font-weight: 500;
   color: #10b981;
   margin-bottom: 4px;
+  cursor: pointer;
 }
 
 .about-member-specialty {
   font-size: 14px;
   color: #64748b;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
 .about-member-description {
@@ -438,6 +476,7 @@
   color: #64748b;
   line-height: 1.6;
   margin: 0 0 20px 0;
+  cursor: pointer;
 }
 
 .about-member-contact {
@@ -451,7 +490,7 @@
   gap: 8px;
   font-size: 14px;
   color: #64748b;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: color 0.2s ease;
 }
 
@@ -488,6 +527,7 @@
   font-weight: 300;
   margin: 24px 0;
   color: white;
+  cursor: default;
 }
 
 .about-tech-description {
@@ -495,6 +535,7 @@
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
   margin: 0 0 40px 0;
+  cursor: default;
 }
 
 .about-tech-features {
@@ -510,6 +551,7 @@
   gap: 12px;
   font-size: 16px;
   color: white;
+  cursor: pointer;
 }
 
 .about-tech-feature svg {
@@ -527,6 +569,7 @@
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
+  cursor: pointer !important;
 }
 
 .about-tech-cta:hover {
@@ -547,6 +590,7 @@
   padding: 24px;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  cursor: pointer !important;
 }
 
 .about-tech-card:hover {
@@ -563,6 +607,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 16px;
+  cursor: pointer;
 }
 
 .about-tech-icon svg {
@@ -574,6 +619,7 @@
   font-weight: 600;
   margin: 0 0 8px 0;
   color: white;
+  cursor: pointer;
 }
 
 .about-tech-card-description {
@@ -581,6 +627,7 @@
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.5;
   margin: 0;
+  cursor: pointer;
 }
 
 .about-certificates-section {
@@ -603,6 +650,7 @@
   padding: 40px 32px;
   text-align: center;
   transition: all 0.3s ease;
+  cursor: pointer !important;
 }
 
 .about-certificate-card:hover {
@@ -620,6 +668,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px;
+  cursor: pointer;
 }
 
 .about-certificate-icon svg {
@@ -631,6 +680,7 @@
   font-weight: 600;
   margin: 0 0 16px 0;
   color: #1e293b;
+  cursor: pointer;
 }
 
 .about-certificate-description {
@@ -638,7 +688,9 @@
   color: #64748b;
   line-height: 1.6;
   margin: 0;
+  cursor: pointer;
 }
+
 .about-cta-section {
   padding: 100px 0;
   background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
@@ -668,6 +720,7 @@
   border-radius: 50%;
   transform: translate(40%, -40%);
   opacity: 0.1;
+  cursor: default;
 }
 
 .about-cta-title {
@@ -676,6 +729,7 @@
   margin: 0 0 24px 0;
   color: #1e293b;
   line-height: 1.2;
+  cursor: default;
 }
 
 .about-cta-description {
@@ -683,6 +737,7 @@
   color: #64748b;
   line-height: 1.6;
   margin: 0 0 40px 0;
+  cursor: default;
 }
 
 .about-cta-buttons {
@@ -701,6 +756,7 @@
   text-decoration: none;
   transition: all 0.3s ease;
   font-size: 16px;
+  cursor: pointer !important;
 }
 
 .about-cta-primary {
@@ -735,6 +791,7 @@
   height: 100%;
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(14, 165, 233, 0.1));
   border-radius: 24px;
+  cursor: default;
 }
 
 @media (max-width: 1024px) {
@@ -912,17 +969,58 @@
   text-align: center;
 }
 
-.about-mt-1 { margin-top: 0.5rem; }
-.about-mt-2 { margin-top: 1rem; }
-.about-mt-3 { margin-top: 1.5rem; }
-.about-mt-4 { margin-top: 2rem; }
+.about-mt-1 { margin-top: 0.5rem; cursor: default; }
+.about-mt-2 { margin-top: 1rem; cursor: default; }
+.about-mt-3 { margin-top: 1.5rem; cursor: default; }
+.about-mt-4 { margin-top: 2rem; cursor: default; }
 
-.about-mb-1 { margin-bottom: 0.5rem; }
-.about-mb-2 { margin-bottom: 1rem; }
-.about-mb-3 { margin-bottom: 1.5rem; }
-.about-mb-4 { margin-bottom: 2rem; }
+.about-mb-1 { margin-bottom: 0.5rem; cursor: default; }
+.about-mb-2 { margin-bottom: 1rem; cursor: default; }
+.about-mb-3 { margin-bottom: 1.5rem; cursor: default; }
+.about-mb-4 { margin-bottom: 2rem; cursor: default; }
 
-.about-p-1 { padding: 0.5rem; }
-.about-p-2 { padding: 1rem; }
-.about-p-3 { padding: 1.5rem; }
-.about-p-4 { padding: 2rem; }
+.about-p-1 { padding: 0.5rem; cursor: default; }
+.about-p-2 { padding: 1rem; cursor: default; }
+.about-p-3 { padding: 1.5rem; cursor: default; }
+.about-p-4 { padding: 2rem; cursor: default; }
+
+@media (hover: hover) {
+  .about-milestone-content:hover,
+  .about-value-card:hover,
+  .about-team-card:hover,
+  .about-certificate-card:hover,
+  .about-tech-card:hover,
+  .about-cta-btn:hover,
+  .about-tech-cta:hover,
+  .about-contact-item:hover {
+    cursor: pointer;
+  }
+  
+  .about-hero-tag:hover,
+  .about-hero-title:hover,
+  .about-gradient-text:hover,
+  .about-hero-description:hover,
+  .about-stat-item:hover,
+  .about-section-tag:hover,
+  .about-section-title:hover,
+  .about-section-subtitle:hover,
+  .about-milestone-year:hover,
+  .about-tech-title:hover,
+  .about-tech-description:hover,
+  .about-cta-title:hover,
+  .about-cta-description:hover {
+    cursor: default;
+  }
+}
+
+.about-milestone-content:focus,
+.about-value-card:focus,
+.about-team-card:focus,
+.about-certificate-card:focus,
+.about-tech-card:focus,
+.about-cta-btn:focus,
+.about-tech-cta:focus,
+.about-contact-item:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}

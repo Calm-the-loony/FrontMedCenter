@@ -5,6 +5,11 @@
   color: #1e293b;
   position: relative;
   overflow: hidden;
+  
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .home-services-section::before {
@@ -37,12 +42,14 @@
   font-weight: 300;
   margin: 0 0 1rem;
   line-height: 1.2;
+  cursor: default;
 }
 
 .home-services-title-highlight {
   color: #10b981;
   font-weight: 600;
   display: inline;
+  cursor: default;
 }
 
 .home-services-grid {
@@ -67,6 +74,7 @@
   align-items: flex-start;
   overflow: hidden;
   height: 100%;
+  cursor: pointer !important;
 }
 
 .home-services-card::before {
@@ -117,6 +125,7 @@
   position: relative;
   box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .home-services-card:hover .home-services-icon-wrapper {
@@ -133,6 +142,7 @@
   background: #10b981;
   border-radius: 50%;
   border: 3px solid white;
+  cursor: pointer;
 }
 
 .home-services-card-title {
@@ -141,6 +151,7 @@
   margin: 0 0 1rem;
   color: #1e293b;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .home-services-card:hover .home-services-card-title {
@@ -153,6 +164,7 @@
   line-height: 1.6;
   margin: 0;
   flex-grow: 1;
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
@@ -232,4 +244,21 @@
   .home-services-card-desc {
     font-size: 0.95rem;
   }
+}
+
+@media (hover: hover) {
+  .home-services-card:hover {
+    cursor: pointer;
+  }
+  
+  .home-services-header:hover,
+  .home-services-title:hover,
+  .home-services-title-highlight:hover {
+    cursor: default;
+  }
+}
+
+.home-services-card:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
 }

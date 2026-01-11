@@ -1,0 +1,1101 @@
+/* Уникальные стили для страницы деталей врача */
+.doctor-detail-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+}
+
+.doctor-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Герой-секция */
+.doctor-detail-hero {
+  padding: 4rem 0;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.doctor-detail-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.doctor-detail-back-link:hover {
+  color: #10b981;
+}
+
+.doctor-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.doctor-detail-main-info {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+}
+
+.doctor-detail-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.doctor-detail-header-content {
+  flex: 1;
+}
+
+.doctor-detail-tags {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.doctor-detail-specialty-tag {
+  background: #f1f5f9;
+  color: #64748b;
+  padding: 0.375rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.doctor-detail-featured-tag {
+  background: linear-gradient(135deg, #10b981, #0d9488);
+  color: white;
+  padding: 0.375rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.doctor-detail-name {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #1e293b;
+  line-height: 1.1;
+}
+
+.doctor-detail-position {
+  font-size: 1.125rem;
+  color: #64748b;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.4;
+}
+
+.doctor-detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.doctor-detail-rating-stars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.doctor-detail-rating-info {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.doctor-detail-rating-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.doctor-detail-rating-reviews {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+/* Действия врача */
+.doctor-detail-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-end;
+}
+
+.doctor-detail-price {
+  text-align: right;
+}
+
+.doctor-detail-price-label {
+  display: block;
+  font-size: 0.875rem;
+  color: #94a3b8;
+  margin-bottom: 0.25rem;
+}
+
+.doctor-detail-price-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #10b981;
+  line-height: 1;
+}
+
+.doctor-detail-book-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #10b981, #0d9488);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.doctor-detail-book-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+}
+
+/* Основной контент */
+.doctor-detail-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+/* Карточки секций */
+.doctor-detail-section-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.doctor-detail-section-card:last-child {
+  margin-bottom: 0;
+}
+
+.doctor-detail-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1.5rem 0;
+  color: #1e293b;
+}
+
+.doctor-detail-section-title svg {
+  color: #10b981;
+}
+
+.doctor-detail-reviews-count {
+  margin-left: 0.5rem;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.doctor-detail-description {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Сетка информации */
+.doctor-detail-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.doctor-detail-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.doctor-detail-info-item svg {
+  color: #10b981;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.doctor-detail-info-item h4 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #94a3b8;
+  margin: 0 0 0.25rem 0;
+}
+
+.doctor-detail-info-item p {
+  font-size: 1rem;
+  color: #1e293b;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Услуги */
+.doctor-detail-services-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.doctor-detail-service-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #64748b;
+}
+
+.doctor-detail-service-item svg {
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+/* Сертификаты */
+.doctor-detail-certifications-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.doctor-detail-cert-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #64748b;
+}
+
+.doctor-detail-cert-item svg {
+  color: #f59e0b;
+  flex-shrink: 0;
+}
+
+/* Боковая панель */
+.doctor-detail-sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-detail-sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.doctor-detail-add-review-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: -20px;
+}
+
+.doctor-detail-add-review-btn:hover {
+  background: #0d9366;
+}
+
+/* Форма отзыва */
+.doctor-detail-review-form {
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.doctor-detail-review-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.doctor-detail-review-form-header h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  color: #1e293b;
+}
+
+.doctor-detail-close-btn {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.doctor-detail-close-btn:hover {
+  background: #e2e8f0;
+  color: #64748b;
+}
+
+.doctor-detail-rating-selector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.doctor-detail-rating-selector span {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.doctor-detail-stars-selector {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.doctor-detail-star-selector-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #e2e8f0;
+  transition: all 0.2s ease;
+}
+
+.doctor-detail-star-selector-btn.active {
+  color: #f59e0b;
+}
+
+.doctor-detail-star-selector-btn:hover {
+  transform: scale(1.1);
+}
+
+.doctor-detail-form-group {
+  margin-bottom: 1rem;
+}
+
+.doctor-detail-form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.doctor-detail-form-group input,
+.doctor-detail-form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.doctor-detail-form-group input:focus,
+.doctor-detail-form-group textarea:focus {
+  outline: none;
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.doctor-detail-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background: linear-gradient(135deg, #10b981, #0d9488);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.2s ease;
+}
+
+.doctor-detail-submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Список отзывов */
+.doctor-detail-reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.doctor-detail-review-item {
+  padding: 1.5rem;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.doctor-detail-review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.doctor-detail-review-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.doctor-detail-author-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #10b981, #0d9488);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.doctor-detail-author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.doctor-detail-author-name {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.875rem;
+}
+
+.doctor-detail-review-date {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.doctor-detail-review-rating {
+  display: flex;
+  align-items: center;
+}
+
+.doctor-detail-review-stars {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.doctor-detail-review-text {
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+}
+
+.doctor-detail-review-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doctor-detail-verified-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.doctor-detail-like-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  color: #64748b;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doctor-detail-like-btn:hover {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.doctor-detail-no-reviews {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.doctor-detail-no-reviews svg {
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.doctor-detail-no-reviews p {
+  color: #64748b;
+  margin: 0;
+}
+
+.doctor-detail-no-reviews p:first-of-type {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Контакты */
+.doctor-detail-contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.doctor-detail-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.doctor-detail-contact-item svg {
+  color: #10b981;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.doctor-detail-contact-item h4 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #94a3b8;
+  margin: 0 0 0.25rem 0;
+}
+
+.doctor-detail-contact-item a,
+.doctor-detail-contact-item p {
+  font-size: 1rem;
+  color: #1e293b;
+  margin: 0;
+  text-decoration: none;
+}
+
+.doctor-detail-contact-item a:hover {
+  color: #10b981;
+}
+
+/* Модальное окно записи */
+.doctor-detail-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.doctor-detail-modal {
+  background: white;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.doctor-detail-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.doctor-detail-modal-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+}
+
+.doctor-detail-modal-close {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.doctor-detail-modal-close:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.doctor-detail-modal-steps {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem 1rem;
+  position: relative;
+}
+
+.doctor-detail-modal-steps::before {
+  content: '';
+  position: absolute;
+  top: 2.5rem;
+  left: 2rem;
+  right: 2rem;
+  height: 2px;
+  background: #e2e8f0;
+  z-index: 1;
+}
+
+.doctor-detail-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.doctor-detail-step-number {
+  width: 2rem;
+  height: 2rem;
+  background: #e2e8f0;
+  color: #64748b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.doctor-detail-step.active .doctor-detail-step-number {
+  background: #10b981;
+  color: white;
+}
+
+.doctor-detail-step span {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.doctor-detail-step.active span {
+  color: #10b981;
+}
+
+.doctor-detail-modal-content {
+  padding: 2rem;
+}
+
+.doctor-detail-step-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+/* Выбор типа консультации */
+.doctor-detail-consultation-types-select {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.doctor-detail-consultation-type-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doctor-detail-consultation-type-card:hover {
+  border-color: #cbd5e1;
+}
+
+.doctor-detail-consultation-type-card.selected {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.doctor-detail-consultation-type-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-detail-consultation-type-icon svg {
+  color: #10b981;
+}
+
+.doctor-detail-consultation-type-info {
+  flex: 1;
+}
+
+.doctor-detail-consultation-type-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #1e293b;
+}
+
+.doctor-detail-consultation-type-info p {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Выбор даты и времени */
+.doctor-detail-dates-select,
+.doctor-detail-times-select {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.75rem;
+}
+
+.doctor-detail-date-button,
+.doctor-detail-time-button {
+  padding: 0.75rem;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  color: #1e293b;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doctor-detail-date-button:hover,
+.doctor-detail-time-button:hover {
+  border-color: #cbd5e1;
+}
+
+.doctor-detail-date-button.selected,
+.doctor-detail-time-button.selected {
+  background: #10b981;
+  border-color: #10b981;
+  color: white;
+}
+
+/* Форма данных */
+.doctor-detail-booking-summary {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.doctor-detail-booking-summary h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+
+.doctor-detail-booking-summary p {
+  color: #64748b;
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.doctor-detail-booking-summary strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.doctor-detail-submit-booking-button {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(90deg, #10b981, #059669);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doctor-detail-submit-booking-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
+}
+
+.doctor-detail-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.doctor-detail-modal-back-button {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.75rem;
+  background: white;
+  color: #64748b;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doctor-detail-modal-back-button:hover {
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+/* CTA секция */
+.doctor-detail-cta-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+}
+
+.doctor-detail-cta-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.doctor-detail-cta-content h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.doctor-detail-cta-content p {
+  font-size: 1.125rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.doctor-detail-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.doctor-detail-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+}
+
+.doctor-detail-cta-btn.primary {
+  background: linear-gradient(90deg, #10b981, #059669);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.doctor-detail-cta-btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.2);
+}
+
+.doctor-detail-cta-btn.secondary {
+  background: white;
+  color: #10b981;
+  border: 2px solid #10b981;
+}
+
+.doctor-detail-cta-btn.secondary:hover {
+  background: rgba(16, 185, 129, 0.05);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.1);
+}
+
+/* Страница не найдена */
+.doctor-detail-not-found {
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.doctor-detail-not-found h1 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.doctor-detail-not-found p {
+  font-size: 1.125rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.doctor-detail-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #10b981;
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.doctor-detail-back-button:hover {
+  background: #0d9366;
+  transform: translateY(-2px);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .doctor-detail-header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .doctor-detail-actions {
+    align-items: stretch;
+    width: 100%;
+  }
+  
+  .doctor-detail-content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .doctor-detail-container {
+    padding: 0 1rem;
+  }
+  
+  .doctor-detail-hero {
+    padding: 3rem 0;
+  }
+  
+  .doctor-detail-main-info {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .doctor-detail-avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .doctor-detail-name {
+    font-size: 2rem;
+  }
+  
+  .doctor-detail-content-grid {
+    padding: 2rem 0;
+  }
+  
+  .doctor-detail-section-card {
+    padding: 1.5rem;
+  }
+  
+  .doctor-detail-cta-content h2 {
+    font-size: 1.75rem;
+  }
+  
+  .doctor-detail-cta-buttons {
+    flex-direction: column;
+  }
+  
+  .doctor-detail-cta-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .doctor-detail-name {
+    font-size: 1.75rem;
+  }
+  
+  .doctor-detail-position {
+    font-size: 1rem;
+  }
+  
+  .doctor-detail-price-value {
+    font-size: 1.75rem;
+  }
+  
+  .doctor-detail-info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .doctor-detail-sidebar-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .doctor-detail-add-review-btn {
+    justify-content: center;
+  }
+  
+  .doctor-detail-dates-select,
+  .doctor-detail-times-select {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

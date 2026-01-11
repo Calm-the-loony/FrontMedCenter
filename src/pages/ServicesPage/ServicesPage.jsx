@@ -6,7 +6,7 @@ import {
   Brain, 
   Bone, 
   Eye, 
- Scissors, 
+  Scissors, 
   Baby, 
   Pill,
   Calendar,
@@ -14,12 +14,12 @@ import {
   Check,
   ChevronRight,
   Search,
-  Filter,
   Cross,
   Shield,
   Users,
   Award,
-  Star
+  Star,
+  Sparkles
 } from 'lucide-react';
 import './ServicesPage.css';
 
@@ -213,7 +213,6 @@ const ServicesPage = () => {
   };
 
   const handleBookService = () => {
-    // В реальном приложении здесь будет переход к записи
     alert(`Вы выбрали услугу: ${selectedService.name}\nСтоимость: ${selectedService.price}\nНаправляем вас к записи на прием...`);
   };
 
@@ -262,31 +261,33 @@ const ServicesPage = () => {
         </div>
       </section>
 
-      {/* Категории */}
-      <section className="services-categories">
+      {/* Категории в стиле страницы врачей */}
+      <section className="services-specialties-section">
         <div className="services-container">
-          <div className="categories-header">
+          <div className="specialties-header">
             <h2>Категории услуг</h2>
             <p>Выберите направление медицины</p>
           </div>
           
-          <div className="categories-grid">
+          <div className="specialties-grid">
             {categories.map((category) => (
               <button
                 key={category.id}
-                className={`category-card ${selectedCategory === category.id ? 'selected' : ''}`}
+                className={`specialty-card ${selectedCategory === category.id ? 'selected' : ''}`}
                 onClick={() => setSelectedCategory(category.id)}
-                style={{ '--category-color': category.color }}
+                style={{ '--specialty-color': category.color }}
               >
-                <div className="category-icon">
-                  <category.icon size={24} />
+                <div className="specialty-icon">
+                  <category.icon size={20} />
                 </div>
-                <span>{category.name}</span>
-                <div className="category-count">
-                  {category.id === 'all' 
-                    ? services.length 
-                    : services.filter(s => s.category === category.id).length
-                  }
+                <div className="specialty-info">
+                  <span className="specialty-name">{category.name}</span>
+                  <span className="specialty-count">
+                    {category.id === 'all' 
+                      ? services.length 
+                      : services.filter(s => s.category === category.id).length
+                    } услуг
+                  </span>
                 </div>
               </button>
             ))}
@@ -334,6 +335,13 @@ const ServicesPage = () => {
                   className={`service-card ${selectedService?.id === service.id ? 'selected' : ''}`}
                   onClick={() => handleServiceSelect(service)}
                 >
+                  {service.popularity > 90 && (
+                    <div className="featured-badge">
+                      <Sparkles size={12} />
+                      <span>Популярно</span>
+                    </div>
+                  )}
+                  
                   <div className="service-header">
                     <div className="service-category">
                       <span>{categories.find(c => c.id === service.category)?.name}</span>
@@ -485,24 +493,6 @@ const ServicesPage = () => {
           </div>
         </div>
       )}
-
-      <section className="services-cta">
-        <div className="services-container">
-          <div className="cta-content">
-            <h2>Не нашли нужную услугу?</h2>
-            <p>Свяжитесь с нами для получения консультации</p>
-            <div className="cta-buttons">
-              <Link to="/contacts" className="cta-button secondary">
-                <span>Контакты</span>
-              </Link>
-              <Link to="/consultations" className="cta-button primary">
-                <Calendar size={18} />
-                <span>Запись на консультацию</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

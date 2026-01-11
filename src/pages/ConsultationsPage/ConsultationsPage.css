@@ -3,8 +3,13 @@
   background: #f0fdf4;
   font-family: 'Inter', sans-serif;
   color: #1e293b;
+  
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: default;
 }
-
 
 .consultations-container {
   max-width: 1200px;
@@ -35,6 +40,7 @@
   font-weight: 500;
   width: fit-content;
   margin: 0 auto 2rem;
+  cursor: default;
 }
 
 .consultations-tag-dot {
@@ -42,6 +48,7 @@
   height: 6px;
   background: #10b981;
   border-radius: 50%;
+  cursor: default;
 }
 
 .consultations-title {
@@ -50,12 +57,14 @@
   font-weight: 300;
   margin: 0 0 1.5rem 0;
   letter-spacing: -0.5px;
+  cursor: default;
 }
 
 .consultations-title-highlight {
   color: #10b981;
   font-weight: 600;
   display: inline-block;
+  cursor: default;
 }
 
 .consultations-description {
@@ -64,6 +73,7 @@
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto 2rem;
+  cursor: default;
 }
 
 .consultations-hero-button {
@@ -77,8 +87,12 @@
   border-radius: 2rem;
   font-weight: 500;
   font-size: 1rem;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: all 0.2s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .consultations-hero-button:hover {
@@ -101,11 +115,13 @@
   font-weight: 300;
   margin-bottom: 0.5rem;
   color: #1e293b;
+  cursor: default;
 }
 
 .consultations-section-header p {
   font-size: 1.125rem;
   color: #64748b;
+  cursor: default;
 }
 
 .benefits-grid {
@@ -121,6 +137,7 @@
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
+  cursor: pointer !important;
 }
 
 .benefit-card:hover {
@@ -137,6 +154,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
+  cursor: pointer;
 }
 
 .benefit-icon svg {
@@ -148,11 +166,13 @@
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: #1e293b;
+  cursor: pointer;
 }
 
 .benefit-card p {
   color: #64748b;
   line-height: 1.6;
+  cursor: pointer;
 }
 
 .consultation-types-section {
@@ -170,7 +190,7 @@
   border: 2px solid rgba(16, 185, 129, 0.1);
   border-radius: 1rem;
   padding: 2rem;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: all 0.3s ease;
 }
 
@@ -199,6 +219,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .type-card.selected .type-icon {
@@ -218,11 +239,13 @@
   font-weight: 600;
   margin-bottom: 0.25rem;
   color: #1e293b;
+  cursor: pointer;
 }
 
 .type-info p {
   color: #64748b;
   font-size: 0.875rem;
+  cursor: pointer;
 }
 
 .type-features {
@@ -238,11 +261,13 @@
   color: #64748b;
   line-height: 1.6;
   margin-bottom: 0.75rem;
+  cursor: pointer;
 }
 
 .type-features li svg {
   color: #10b981;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .type-price {
@@ -250,6 +275,7 @@
   font-weight: 700;
   color: #10b981;
   text-align: right;
+  cursor: pointer;
 }
 
 .consultations-doctors {
@@ -269,6 +295,7 @@
   border-radius: 1rem;
   padding: 2rem;
   transition: all 0.3s ease;
+  cursor: pointer !important;
 }
 
 .doctor-card:hover {
@@ -294,6 +321,7 @@
   color: white;
   font-weight: 600;
   font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .doctor-info h3 {
@@ -301,12 +329,14 @@
   font-weight: 600;
   margin-bottom: 0.25rem;
   color: #1e293b;
+  cursor: pointer;
 }
 
 .doctor-specialty {
   color: #10b981;
   font-weight: 500;
   font-size: 0.875rem;
+  cursor: pointer;
 }
 
 .doctor-rating {
@@ -314,20 +344,24 @@
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .doctor-rating svg {
   color: #f59e0b;
+  cursor: pointer;
 }
 
 .doctor-rating span:first-of-type {
   font-weight: 600;
   color: #1e293b;
+  cursor: pointer;
 }
 
 .doctor-rating .reviews {
   color: #64748b;
   font-size: 0.875rem;
+  cursor: pointer;
 }
 
 .doctor-description {
@@ -335,6 +369,7 @@
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
+  cursor: pointer;
 }
 
 .doctor-details {
@@ -351,18 +386,21 @@
   gap: 0.5rem;
   color: #64748b;
   font-size: 0.875rem;
+  cursor: pointer;
 }
 
 .doctor-experience svg,
 .doctor-education svg {
   color: #10b981;
   flex-shrink: 0;
+  cursor: pointer;
 }
 
 .doctor-consultation-types {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
+  cursor: pointer;
 }
 
 .consultation-type-badge {
@@ -370,6 +408,7 @@
   border-radius: 1rem;
   font-size: 0.75rem;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .consultation-type-badge.in-person {
@@ -394,8 +433,12 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: all 0.2s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .doctor-book-button:hover {
@@ -416,6 +459,7 @@
   justify-content: center;
   z-index: 1000;
   padding: 1rem;
+  cursor: pointer !important;
 }
 
 .booking-modal {
@@ -426,6 +470,7 @@
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  cursor: default;
 }
 
 .modal-header {
@@ -441,16 +486,21 @@
   font-weight: 600;
   color: #1e293b;
   margin: 0;
+  cursor: default;
 }
 
 .modal-close {
   background: none;
   border: none;
   color: #64748b;
-  cursor: pointer;
+  cursor: pointer !important;
   padding: 0.5rem;
   border-radius: 0.5rem;
   transition: all 0.2s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .modal-close:hover {
@@ -474,6 +524,7 @@
   height: 2px;
   background: #e2e8f0;
   z-index: 1;
+  cursor: default;
 }
 
 .step {
@@ -483,6 +534,7 @@
   gap: 0.5rem;
   position: relative;
   z-index: 2;
+  cursor: default;
 }
 
 .step-number {
@@ -495,6 +547,7 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  cursor: default;
 }
 
 .step.active .step-number {
@@ -506,6 +559,7 @@
   font-size: 0.875rem;
   color: #64748b;
   font-weight: 500;
+  cursor: default;
 }
 
 .step.active span {
@@ -521,6 +575,7 @@
   font-weight: 600;
   margin-bottom: 1.5rem;
   color: #1e293b;
+  cursor: default;
 }
 
 .doctors-select {
@@ -536,8 +591,12 @@
   padding: 1rem;
   border: 2px solid #e2e8f0;
   border-radius: 0.75rem;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: all 0.2s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .doctor-select-card:hover {
@@ -559,6 +618,7 @@
   justify-content: center;
   color: white;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .select-info h4 {
@@ -566,12 +626,14 @@
   font-weight: 600;
   margin-bottom: 0.25rem;
   color: #1e293b;
+  cursor: pointer;
 }
 
 .select-info p {
   color: #64748b;
   font-size: 0.875rem;
   margin-bottom: 0.25rem;
+  cursor: pointer;
 }
 
 .select-rating {
@@ -580,12 +642,14 @@
   gap: 0.25rem;
   font-size: 0.875rem;
   color: #1e293b;
+  cursor: pointer;
 }
 
 .select-rating svg {
   color: #f59e0b;
   width: 12px;
   height: 12px;
+  cursor: pointer;
 }
 
 .dates-select,
@@ -603,8 +667,12 @@
   border-radius: 0.75rem;
   color: #1e293b;
   font-weight: 500;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: all 0.2s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .date-button:hover,
@@ -628,6 +696,7 @@
   margin-bottom: 0.5rem;
   font-weight: 500;
   color: #1e293b;
+  cursor: default;
 }
 
 .form-group input,
@@ -639,6 +708,11 @@
   font-family: 'Inter', sans-serif;
   font-size: 1rem;
   transition: all 0.2s ease;
+  cursor: text;
+  user-select: auto;
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
 }
 
 .form-group input:focus,
@@ -653,6 +727,7 @@
   border-radius: 0.75rem;
   padding: 1rem;
   margin-bottom: 1.5rem;
+  cursor: default;
 }
 
 .booking-summary h4 {
@@ -660,17 +735,20 @@
   font-weight: 600;
   margin-bottom: 0.75rem;
   color: #1e293b;
+  cursor: default;
 }
 
 .booking-summary p {
   color: #64748b;
   margin-bottom: 0.25rem;
   font-size: 0.875rem;
+  cursor: default;
 }
 
 .booking-summary strong {
   color: #1e293b;
   font-weight: 600;
+  cursor: default;
 }
 
 .submit-booking-button {
@@ -682,8 +760,12 @@
   border-radius: 0.75rem;
   font-weight: 500;
   font-size: 1rem;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: all 0.2s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .submit-booking-button:hover {
@@ -706,8 +788,12 @@
   background: white;
   color: #64748b;
   font-weight: 500;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: all 0.2s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .modal-back-button:hover {
@@ -742,6 +828,7 @@
   font-weight: 300;
   margin-bottom: 1rem;
   color: #1e293b;
+  cursor: default;
 }
 
 .cta-content p {
@@ -749,6 +836,7 @@
   color: #64748b;
   margin-bottom: 2rem;
   line-height: 1.6;
+  cursor: default;
 }
 
 .cta-buttons {
@@ -767,7 +855,11 @@
   text-decoration: none;
   font-size: 1rem;
   transition: all 0.2s ease;
-  cursor: pointer;
+  cursor: pointer !important;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .cta-button.secondary {
@@ -776,20 +868,11 @@
   border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
-.cta-button.secondary:hover {
-  background: rgba(16, 185, 129, 0.05);
-  transform: translateY(-2px);
-}
 
 .cta-button.primary {
   background: linear-gradient(90deg, #10b981, #059669);
   color: white;
   border: none;
-}
-
-.cta-button.primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -880,4 +963,65 @@
   .modal-footer {
     padding: 1rem 1.5rem 1.5rem;
   }
+}
+
+@media (hover: hover) {
+  .consultations-hero-button:hover,
+  .type-card:hover,
+  .benefit-card:hover,
+  .doctor-card:hover,
+  .doctor-book-button:hover,
+  .modal-close:hover,
+  .date-button:hover,
+  .time-button:hover,
+  .submit-booking-button:hover,
+  .modal-back-button:hover,
+  .modal-next-button:hover,
+  .cta-button:hover,
+  .doctor-select-card:hover {
+    cursor: pointer;
+  }
+  
+  .consultations-tag:hover,
+  .consultations-title:hover,
+  .consultations-title-highlight:hover,
+  .consultations-description:hover,
+  .consultations-section-header h2:hover,
+  .consultations-section-header p:hover,
+  .step:hover,
+  .step-number:hover,
+  .step span:hover,
+  .modal-header h2:hover,
+  .step-content h3:hover,
+  .select-info h4:hover,
+  .select-info p:hover,
+  .booking-summary:hover,
+  .booking-summary h4:hover,
+  .booking-summary p:hover,
+  .cta-content h2:hover,
+  .cta-content p:hover {
+    cursor: default;
+  }
+  
+  .form-group input:hover,
+  .form-group textarea:hover {
+    cursor: text;
+  }
+}
+
+.consultations-hero-button:focus,
+.type-card:focus,
+.benefit-card:focus,
+.doctor-card:focus,
+.doctor-book-button:focus,
+.modal-close:focus,
+.date-button:focus,
+.time-button:focus,
+.submit-booking-button:focus,
+.modal-back-button:focus,
+.modal-next-button:focus,
+.cta-button:focus,
+.doctor-select-card:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
 }

@@ -3,6 +3,11 @@
   background: white;
   font-family: 'Inter', sans-serif;
   color: #1e293b;
+  
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .philosophy-wrapper {
@@ -20,12 +25,14 @@
   font-weight: 300;
   margin: 0 0 1rem;
   line-height: 1.2;
+  cursor: default;
 }
 
 .philosophy-title-highlight {
   color: #10b981;
   font-weight: 600;
   display: inline;
+  cursor: default;
 }
 
 .philosophy-subtitle {
@@ -34,6 +41,7 @@
   max-width: 500px;
   margin: 0 auto;
   line-height: 1.6;
+  cursor: default;
 }
 
 .philosophy-grid {
@@ -47,7 +55,7 @@
   border: 1px solid rgba(16, 185, 129, 0.15);
   border-radius: 1rem;
   padding: 2rem;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -91,6 +99,7 @@
   margin-bottom: 1.25rem;
   position: relative;
   box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+  cursor: pointer;
 }
 
 .philosophy-icon-dot {
@@ -102,6 +111,7 @@
   background: #10b981;
   border-radius: 50%;
   border: 2px solid white;
+  cursor: pointer;
 }
 
 .philosophy-card-title {
@@ -110,6 +120,7 @@
   margin: 0 0 0.75rem;
   color: #1e293b;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .philosophy-card:hover .philosophy-card-title {
@@ -121,6 +132,7 @@
   color: #64748b;
   line-height: 1.5;
   margin: 0;
+  cursor: pointer;
 }
 
 @media (max-width: 1024px) {
@@ -186,4 +198,22 @@
   .philosophy-subtitle {
     font-size: 0.9rem;
   }
+}
+
+@media (hover: hover) {
+  .philosophy-card:hover {
+    cursor: pointer;
+  }
+  
+  .philosophy-header:hover,
+  .philosophy-title:hover,
+  .philosophy-title-highlight:hover,
+  .philosophy-subtitle:hover {
+    cursor: default;
+  }
+}
+
+.philosophy-card:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
 }

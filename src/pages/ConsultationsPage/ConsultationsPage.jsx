@@ -202,8 +202,7 @@ const ConsultationsPage = () => {
               ЗАПИСЬ НА КОНСУЛЬТАЦИЮ
             </div>
             <h1 className="consultations-title">
-              Запись на прием к врачу
-              <span className="consultations-title-highlight">MediCare</span>
+              Запись на прием к врачу 
             </h1>
             <p className="consultations-description">
               Запишитесь на очную или онлайн консультацию с ведущими специалистами. 
@@ -280,7 +279,6 @@ const ConsultationsPage = () => {
         </div>
       </section>
 
-      {/* Врачи */}
       <section className="consultations-doctors">
         <div className="consultations-container">
           <div className="consultations-section-header">
@@ -349,7 +347,6 @@ const ConsultationsPage = () => {
         </div>
       </section>
 
-      {/* Модальное окно записи */}
       {isBookingModalOpen && (
         <div className="booking-modal-overlay" onClick={() => setIsBookingModalOpen(false)}>
           <div className="booking-modal" onClick={(e) => e.stopPropagation()}>

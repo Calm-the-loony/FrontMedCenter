@@ -6,24 +6,19 @@ import {
   Award, 
   Calendar,
   Clock,
-  GraduationCap,
   Heart,
   Brain,
   Bone,
   Eye,
   Baby,
   Cross,
-  ChevronRight,
   Search,
   X,
   Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
   Check,
   Sparkles,
   Shield,
-  Clock4
+  ChevronRight
 } from 'lucide-react';
 import './DoctorsPage.css';
 
@@ -191,8 +186,18 @@ const DoctorsPage = () => {
     return matchesSpecialty && matchesSearch;
   });
 
-  const handleBookAppointment = (doctor) => {
+  const handleBookAppointment = (doctor, e) => {
+    e.preventDefault();
+    e.stopPropagation();
     alert(`Запись на прием к врачу ${doctor.name}\nСпециализация: ${doctor.position}\nБлижайшее время: ${doctor.nextAvailable}\nМы свяжемся с вами для подтверждения записи.`);
+  };
+
+  const handleDoctorCardClick = (doctorId, e) => {
+    // Если клик был по кнопке записи, не переходим по ссылке
+    if (e.target.closest('.book-consultation-btn')) {
+      return;
+    }
+    // Иначе React Router сам обработает переход по <Link>
   };
 
   return (
@@ -316,72 +321,83 @@ const DoctorsPage = () => {
           ) : (
             <div className="doctors-grid">
               {filteredDoctors.map((doctor) => (
-                <div 
+                <Link 
                   key={doctor.id}
-                  className={`doctor-card ${doctor.featured ? 'featured' : ''}`}
+                  to={`/doctors/${doctor.id}`}
+                  className="doctor-card-link"
+                  onClick={(e) => handleDoctorCardClick(doctor.id, e)}
                 >
-                  {doctor.featured && (
-                    <div className="featured-badge">
-                      <Sparkles size={12} />
-                      <span>Рекомендуем</span>
-                    </div>
-                  )}
-                  
-                  <div className="doctor-card-header">
-                    <div className="doctor-avatar" style={{ backgroundColor: doctor.imageColor }}>
-                      <User size={32} color="white" />
-                    </div>
-                    <div className="doctor-header-info">
-                      <h3 className="doctor-name">{doctor.name}</h3>
-                      <p className="doctor-position">{doctor.position}</p>
-                      <div className="doctor-rating">
-                        <Star size={14} />
-                        <span className="rating-value">{doctor.rating}</span>
-                        <span className="rating-reviews">({doctor.reviews} отзывов)</span>
+                  <div 
+                    className={`doctor-card ${doctor.featured ? 'featured' : ''}`}
+                  >
+                    {doctor.featured && (
+                      <div className="featured-badge">
+                        <Sparkles size={12} />
+                        <span>Рекомендуем</span>
+                      </div>
+                    )}
+                    
+                    <div className="doctor-card-header">
+                      <div className="doctor-avatar" style={{ backgroundColor: doctor.imageColor }}>
+                        <User size={32} color="white" />
+                      </div>
+                      <div className="doctor-header-info">
+                        <h3 className="doctor-name">{doctor.name}</h3>
+                        <p className="doctor-position">{doctor.position}</p>
+                        <div className="doctor-rating">
+                          <Star size={14} />
+                          <span className="rating-value">{doctor.rating}</span>
+                          <span className="rating-reviews">({doctor.reviews} отзывов)</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  
-                  <div className="doctor-specialty-badge">
-                    {specialties.find(s => s.id === doctor.specialty)?.name}
-                  </div>
-                  
-                  <p className="doctor-description">{doctor.description}</p>
-                  
-                  <div className="doctor-details">
-                    <div className="doctor-detail">
-                      <Clock size={16} />
-                      <span>{doctor.experience} лет опыта</span>
+                    
+                    <div className="doctor-specialty-badge">
+                      {specialties.find(s => s.id === doctor.specialty)?.name}
                     </div>
-                    <div className="doctor-detail">
-                      <Clock4 size={16} />
-                      <span>{doctor.nextAvailable}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="doctor-services">
-                    {doctor.services.slice(0, 3).map((service, index) => (
-                      <div key={index} className="service-item">
-                        <Check size={12} />
-                        <span>{service}</span>
+                    
+                    <p className="doctor-description">{doctor.description}</p>
+                    
+                    <div className="doctor-details">
+                      <div className="doctor-detail">
+                        <Clock size={16} />
+                        <span>{doctor.experience} лет опыта</span>
                       </div>
-                    ))}
-                  </div>
-                  
-                  <div className="doctor-card-footer">
-                    <div className="doctor-price">
-                      <span className="price-label">Консультация</span>
-                      <span className="price-value">{doctor.price}</span>
+                      <div className="doctor-detail">
+                        <Calendar size={16} />
+                        <span>{doctor.nextAvailable}</span>
+                      </div>
                     </div>
-                    <button 
-                      className="book-consultation-btn"
-                      onClick={() => handleBookAppointment(doctor)}
-                    >
-                      <Calendar size={16} />
-                      <span>Записаться</span>
-                    </button>
+                    
+                    <div className="doctor-services">
+                      {doctor.services.slice(0, 3).map((service, index) => (
+                        <div key={index} className="service-item">
+                          <Check size={12} />
+                          <span>{service}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="doctor-card-footer">
+                      <div className="doctor-price">
+                        <span className="price-label">Консультация</span>
+                        <span className="price-value">{doctor.price}</span>
+                      </div>
+                      <button 
+                        className="book-consultation-btn"
+                        onClick={(e) => handleBookAppointment(doctor, e)}
+                      >
+                        <Calendar size={16} />
+                        <span>Записаться</span>
+                      </button>
+                    </div>
+                    
+                    <div className="doctor-card-view-link">
+                      <span>Подробнее о враче</span>
+                      <ChevronRight size={16} />
+                    </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           )}
@@ -390,20 +406,18 @@ const DoctorsPage = () => {
 
       <section className="doctors-cta-section">
         <div className="doctors-container">
-          <div className="cta-card">
-            <div className="cta-content">
-              <h2>Нужна помощь с выбором врача?</h2>
-              <p>Наши координаторы помогут подобрать подходящего специалиста под ваши потребности</p>
-              <div className="cta-buttons">
-                <Link to="/contacts" className="cta-btn secondary">
-                  <Phone size={18} />
-                  <span>Контакты</span>
-                </Link>
-                <Link to="/consultations" className="cta-btn primary">
-                  <Calendar size={18} />
-                  <span>Бесплатная консультация</span>
-                </Link>
-              </div>
+          <div className="cta-content">
+            <h2>Нужна помощь с выбором врача?</h2>
+            <p>Наши координаторы помогут подобрать подходящего специалиста под ваши потребности</p>
+            <div className="cta-buttons">
+              <Link to="/contacts" className="cta-btn secondary">
+                <Phone size={18} />
+                <span>Контакты</span>
+              </Link>
+              <Link to="/consultations" className="cta-btn primary">
+                <Calendar size={18} />
+                <span>Бесплатная консультация</span>
+              </Link>
             </div>
           </div>
         </div>
